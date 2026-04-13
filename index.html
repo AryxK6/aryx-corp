@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ARYX Co. is an independent digital studio building niche content platforms across education, health, beauty, tech and AI.">
+<meta name="author" content="Aryx K.">
+<title>ARYX Co. &mdash; Digital Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur2"></div>
+<div id="aurora">
+  <div class="aorb"></div>
+  <div class="aorb"></div>
+  <div class="aorb"></div>
+  <div class="aorb"></div>
+</div>
+<div id="grid"></div>
+<canvas id="pts"></canvas>
+<div id="spb"></div>
+
+<!-- LOADER -->
+<div id="ldr">
+  <div class="ldr-ring">
+    <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="rlg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0077ff"/>
+          <stop offset="100%" stop-color="#00d4ff"/>
+        </linearGradient>
+      </defs>
+      <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" fill="none" stroke="url(#rlg)" stroke-width="1.4" opacity="0.85"/>
+      <polygon points="36,13 56,24 56,48 36,59 16,48 16,24" fill="none" stroke="url(#rlg)" stroke-width="0.6" opacity="0.28"/>
+    </svg>
+    <div class="ldr-a">A</div>
+  </div>
+  <div class="ldr-name">ARY<em>X</em></div>
+  <div class="ldr-sub">Digital Studio</div>
+  <div class="ldr-track"><div class="ldr-bar" id="ldrBar"></div></div>
+  <div class="ldr-pct" id="ldrPct">0%</div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="btt" aria-label="Back to top">&#8593;</button>
+
+<!-- NAV -->
+<nav id="nb">
+  <a href="#home" class="logo">
+    <div class="logo-box">
+      <div class="lsr2"></div>
+      <div class="lsr"></div>
+      <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0077ff"/>
+            <stop offset="100%" stop-color="#00d4ff"/>
+          </linearGradient>
+          <filter id="ngf">
+            <feGaussianBlur stdDeviation="1.5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <polygon points="21,4 36,12.5 36,29.5 21,38 6,29.5 6,12.5" fill="none" stroke="url(#nlg)" stroke-width="1.2" filter="url(#ngf)" opacity="0.9"/>
+        <polygon points="21,9 31,14.5 31,25.5 21,31 11,25.5 11,14.5" fill="none" stroke="url(#nlg)" stroke-width="0.6" opacity="0.3"/>
+        <text x="21" y="28" font-family="Arial Black,Arial" font-size="17" font-weight="900" text-anchor="middle" fill="url(#nlg)" filter="url(#ngf)">A</text>
+      </svg>
+    </div>
+    <div class="logo-txt">
+      <span class="logo-n">ARY<span class="lx">X</span></span>
+      <span class="logo-s">Digital Studio</span>
+    </div>
+  </a>
+  <ul class="navl" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hbg" id="hbg" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mob" id="mob">
+  <a href="#about" class="ml">About</a>
+  <a href="#services" class="ml">Services</a>
+  <a href="#projects" class="ml">Projects</a>
+  <a href="#testimonials" class="ml">Reviews</a>
+  <a href="#contact" class="ml">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-eyebrow">Aryx K. &mdash; Founder &amp; Creator</div>
+  <h1 class="hero-title">
+    Building Digital
+    <span class="line2">
+      <span class="glitch" data-text="Platforms.">Platforms.</span>
+    </span>
+  </h1>
+  <p class="hero-desc" id="td"></p>
+  <div class="hero-btns">
+    <a href="#projects" class="bp">View Projects</a>
+    <a href="#contact" class="bg">Get in Touch</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="sn" data-count="3">00</div>
+      <div class="sl">Live Platforms</div>
+    </div>
+    <div>
+      <div class="sn" data-count="3">00</div>
+      <div class="sl">Niches Covered</div>
+    </div>
+    <div>
+      <div class="sn">100%</div>
+      <div class="sl">Independent</div>
+    </div>
+  </div>
+</section>
+
+<div class="dvd"></div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="rvl">
+      <div class="slbl">About</div>
+      <h2 class="stit">Who is<br>Aryx K.?</h2>
+      <p class="abt">I am an independent digital creator operating under ARYX Co., building content-driven platforms across multiple niches. My work is focused on creating websites that deliver real, usable value to a specific audience.</p>
+      <p class="abt">Every platform under ARYX Co. is built from scratch with a clear content strategy and a long-term growth mindset. No team, no agency. Just focused, consistent work.</p>
+    </div>
+    <div class="rvr">
+      <div class="hg">
+        <div class="hi"><span class="hi-i">&#9889;</span><div class="hi-l">AI Tech</div></div>
+        <div class="hi"><span class="hi-i">&#127807;</span><div class="hi-l">Wellness</div></div>
+        <div class="hi"><span class="hi-i">&#128176;</span><div class="hi-l">Monetize</div></div>
+        <div class="hi"><span class="hi-i">&#128269;</span><div class="hi-l">SEO</div></div>
+        <div class="hi"><span class="hi-i">&#127912;</span><div class="hi-l">Design</div></div>
+        <div class="hi"><span class="hi-i">&#128200;</span><div class="hi-l">Growth</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dvd"></div>
+
+<!-- BENTO COUNTERS -->
+<section class="bento">
+  <div class="bento-grid">
+    <div class="bc rvs">
+      <span class="bn"><span class="cnum" data-target="3">0</span></span>
+      <div class="bl">Live Platforms</div>
+      <div class="bd">Active niche websites</div>
+    </div>
+    <div class="bc rvs">
+      <span class="bn"><span class="cnum" data-target="3">0</span></span>
+      <div class="bl">Niches Covered</div>
+      <div class="bd">AI, Wellness, Health</div>
+    </div>
+    <div class="bc rvs">
+      <span class="bn"><span class="cnum" data-target="100">0</span><span class="bs">%</span></span>
+      <div class="bl">Independent</div>
+      <div class="bd">Solo built, solo managed</div>
+    </div>
+    <div class="bc rvs">
+      <span class="bn"><span class="cnum" data-target="4">0</span><span class="bs">+</span></span>
+      <div class="bl">Core Skills</div>
+      <div class="bd">Design, SEO, Dev, Strategy</div>
+    </div>
+  </div>
+</section>
+
+<div class="dvd"></div>
+
+<!-- SERVICES -->
+<section class="svc" id="services">
+  <div class="sec-head rv">
+    <div class="slbl">What I Do</div>
+    <h2 class="stit">Services &amp; Skills</h2>
+  </div>
+  <div class="svc-grid">
+    <div class="sc rv">
+      <div class="sc-tl"></div><div class="sc-br"></div>
+      <div class="sc-num">01</div>
+      <span class="sc-ico">&#127760;</span>
+      <div class="sc-t">Niche Website Building</div>
+      <p class="sc-d">Creating focused content platforms from scratch, built around a specific audience and topic with long-term organic growth in mind.</p>
+      <div class="tags"><span class="tg">Blogger</span><span class="tg">HTML/CSS</span><span class="tg">Content</span></div>
+    </div>
+    <div class="sc rv">
+      <div class="sc-tl"></div><div class="sc-br"></div>
+      <div class="sc-num">02</div>
+      <span class="sc-ico">&#127912;</span>
+      <div class="sc-t">Theme Design</div>
+      <p class="sc-d">Designing and building custom website themes that are clean, fast, and visually distinct. Every theme carries a clear brand identity.</p>
+      <div class="tags"><span class="tg">Custom Themes</span><span class="tg">UI Design</span><span class="tg">Branding</span></div>
+    </div>
+    <div class="sc rv">
+      <div class="sc-tl"></div><div class="sc-br"></div>
+      <div class="sc-num">03</div>
+      <span class="sc-ico">&#128269;</span>
+      <div class="sc-t">SEO &amp; Content Strategy</div>
+      <p class="sc-d">Building content systems designed to rank and grow organically. From keyword research to content structure, long-term traffic is always the goal.</p>
+      <div class="tags"><span class="tg">On-Page SEO</span><span class="tg">Keywords</span><span class="tg">Strategy</span></div>
+    </div>
+    <div class="sc rv">
+      <div class="sc-tl"></div><div class="sc-br"></div>
+      <div class="sc-num">04</div>
+      <span class="sc-ico">&#128176;</span>
+      <div class="sc-t">Digital Monetization</div>
+      <p class="sc-d">Setting up earning models for content platforms including ad networks, affiliate programs, and passive income structures that scale with traffic.</p>
+      <div class="tags"><span class="tg">AdSense</span><span class="tg">Affiliate</span><span class="tg">Passive Income</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="dvd"></div>
+
+<!-- PROJECTS -->
+<section class="prj" id="projects">
+  <div class="prj-inner">
+    <div class="rv">
+      <div class="slbl">Portfolio</div>
+      <h2 class="stit">Projects by ARYX Co.</h2>
+    </div>
+    <div class="prj-grid">
+      <div class="pc rv">
+        <div class="pv pv-g">
+          <div class="scnl"></div>
+          <span class="pvbi">&#129302;</span>
+          <span class="pvlb pvg">ARYX GUIDE</span>
+          <div class="pvln pl1"></div>
+        </div>
+        <div class="pb">
+          <div class="pm">
+            <span class="pnc">AI / Tech / Earnings</span>
+            <span class="pst"><span class="dot"></span>Live</span>
+          </div>
+          <div class="pnm">ARYX Guide</div>
+          <p class="pdc">A resource platform covering AI tools, digital earning methods, SEO strategies, and online income guides for people building in the digital space.</p>
+          <div class="ptg"><span class="tg">AI Tools</span><span class="tg">SEO</span><span class="tg">Earn Online</span><span class="tg">Tech</span></div>
+          <a href="https://www.aryxguide.site" target="_blank" rel="noopener" class="vb">Visit Site <span class="arr">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="pc rv">
+        <div class="pv pv-l">
+          <div class="scnl"></div>
+          <span class="pvbi">&#10024;</span>
+          <span class="pvlb pvl">ARYX LUMINA</span>
+          <div class="pvln pl2"></div>
+        </div>
+        <div class="pb">
+          <div class="pm">
+            <span class="pnc pnl">Beauty / Wellness / Care</span>
+            <span class="pst"><span class="dot"></span>Live</span>
+          </div>
+          <div class="pnm">ARYX Lumina</div>
+          <p class="pdc">A beauty and wellness content platform focused on skincare, self-care routines, and health guidance for everyday people looking for real, trusted advice.</p>
+          <div class="ptg"><span class="tg tl">Beauty</span><span class="tg tl">Wellness</span><span class="tg tl">Skincare</span><span class="tg tl">Lifestyle</span></div>
+          <a href="https://www.aryxlumina.xyz" target="_blank" rel="noopener" class="vb vbl">Visit Site <span class="arr">&#8594;</span></a>
+        </div>
+      </div>
+      <!-- ARYX Elevate -->
+      <div class="pc rv">
+        <div class="pv pv-e">
+          <div class="scnl"></div>
+          <span class="pvbi">&#127891;</span>
+          <span class="pvlb pve">ARYX ELEVATE</span>
+          <div class="pvln pl4"></div>
+        </div>
+        <div class="pb">
+          <div class="pm">
+            <span class="pnc pne">Education / Career / Skills</span>
+            <span class="pst"><span class="dot"></span>Live</span>
+          </div>
+          <div class="pnm">ARYX Elevate</div>
+          <p class="pdc">A learning and career hub built for students and young professionals. Covers study tips, certifications, freelancing, and digital skills to help people build a future they actually want.</p>
+          <div class="ptg"><span class="tg te">Study Tips</span><span class="tg te">Career</span><span class="tg te">Freelancing</span><span class="tg te">Certifications</span></div>
+          <a href="https://www.aryxelevate.xyz" target="_blank" rel="noopener" class="vb vbe">Visit Site <span class="arr">&#8594;</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="dvd"></div>
+
+<!-- TESTIMONIALS -->
+<section class="tst" id="testimonials">
+  <div class="sec-head rv">
+    <div class="slbl">Testimonials</div>
+    <h2 class="stit">What People Say</h2>
+  </div>
+  <div class="tst-grid">
+    <div class="tc rv">
+      <span class="tq">"</span>
+      <p class="tt">Aryx built a clean, fast, and professional-looking website that matched exactly what I had in mind. The design was sharp and the whole process was smooth from start to finish.</p>
+      <div class="td"></div>
+      <div class="ta">
+        <div class="tav">S</div>
+        <div>
+          <div class="tn">Sara M.</div>
+          <div class="tr">Blogger / Content Creator</div>
+          <div class="tstar">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc rv">
+      <span class="tq">"</span>
+      <p class="tt">The theme design was exactly what my brand needed. Very professional work, delivered on time. Highly recommend ARYX Co. for anyone looking to build a serious online presence.</p>
+      <div class="td"></div>
+      <div class="ta">
+        <div class="tav">R</div>
+        <div>
+          <div class="tn">Raza K.</div>
+          <div class="tr">Digital Entrepreneur</div>
+          <div class="tstar">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc rv">
+      <span class="tq">"</span>
+      <p class="tt">Solid SEO guidance and content strategy. Within weeks my site started getting real organic traffic. Working with Aryx was genuinely one of the best decisions for my blog.</p>
+      <div class="td"></div>
+      <div class="ta">
+        <div class="tav">A</div>
+        <div>
+          <div class="tn">Aiza N.</div>
+          <div class="tr">Health &amp; Wellness Blogger</div>
+          <div class="tstar">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dvd"></div>
+
+<!-- CONTACT -->
+<section class="cnt" id="contact">
+  <div class="cnt-glow"></div>
+  <div class="cnt-in revup">
+    <div class="slbl" style="justify-content:center;">Contact</div>
+    <h2 class="ct">
+      Let's Build<br>
+      <span class="ot">Something</span> Real.
+    </h2>
+    <p class="cs">Have a project in mind or want to work together? Reach out and let's talk about it.</p>
+    <div class="cl">
+      <button class="erb" id="erb" onclick="showEmail()">
+        <span>&#9993;</span>
+        <span class="el" id="el">Click to Reveal Email</span>
+      </button>
+    <div class="cnt-social">
+        <a class="csb" href="https://x.com/Aryx_K6" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="csb" href="https://t.me/aryxco" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a class="csb" href="https://facebook.com/AryxK6" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a class="csb" href="https://pin.it/4hotQkvfe" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-brand-name">ARY<span class="lx">X</span> CO.</div>
+        <p class="ft-brand-desc">Independent digital studio building niche content platforms that connect people with the right knowledge.</p>
+        <div class="ft-social-row">
+          <a class="fsb" href="https://x.com/Aryx_K6" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="fsb" href="https://t.me/aryxco" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+          <a class="fsb" href="https://facebook.com/AryxK6" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="fsb" href="https://pin.it/4hotQkvfe" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-title">Navigate</div>
+        <div class="ft-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-title">Projects</div>
+        <div class="ft-links">
+          <a href="https://www.aryxguide.site" target="_blank" rel="noopener">ARYX Guide</a>
+          <a href="https://www.aryxlumina.xyz" target="_blank" rel="noopener">ARYX Lumina</a>
+          <a href="https://www.aryxelevate.xyz" target="_blank" rel="noopener">ARYX Elevate</a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div class="ft-copy">&copy; <span id="yr2"></span> ARY<span class="lx">X</span> Co. All rights reserved.</div>
+      <div class="ft-powered">Powered by ARYX Co.</div>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
